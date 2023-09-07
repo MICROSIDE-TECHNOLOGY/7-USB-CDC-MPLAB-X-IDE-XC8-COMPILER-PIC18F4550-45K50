@@ -1,0 +1,31 @@
+on: [push]
+
+jobs:
+  gist-sync:
+    name: gist-sync
+    runs-on: ubuntu-latest
+    steps:
+    #PIC18F4550
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: vhperaltaj/gist-sync-action@v1.0.0
+        id: PIC18F4550
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/microside-mx/f3d4a94e7c46b4fa5ca7a108c51b29b8
+          gist_title: 7-MPLAB-CDC-4550.c
+          gist_description: Prácticas MPLABX
+          github_file: Proyecto/PIC18F4550/Código/main.c
+          file_encoding: ISO-8859-1
+    #PIC18F45K50
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: vhperaltaj/gist-sync-action@v1.0.0
+        id: PIC18F45K50
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/microside-mx/e7fa9c9099ae3ea9f5dd36885695e10b
+          gist_title: 7-MPLAB-CDC.c
+          gist_description: Prácticas MPLABX
+          github_file: Proyecto/PIC18F45K50/Código/main.c
+          file_encoding: ISO-8859-1
