@@ -121,10 +121,5 @@ MAIN_RETURN main(void) {
         //Application specific tasks
         //APP_DeviceCDCBasicDemoTasks();
         APP_DeviceCDCBasicDemoTasks_Microside();
-
-    }//end while
-}//end main
-
-/***************************
- End of File
- */
+    }
+}
